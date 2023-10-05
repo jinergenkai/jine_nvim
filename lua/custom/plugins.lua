@@ -3,6 +3,7 @@ local overrides = require("custom.configs.overrides")
 ---@type NvPluginSpec[]
 local plugins = {
 
+
   -- Override plugin definition options
    {
     "zbirenbaum/copilot.lua",
@@ -47,10 +48,21 @@ local plugins = {
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
-  --my configs
+  --my configs flutter
   {
-    "dart-lang/dart-vim-plugin",
-    ft = "dart"
+    --"dart-lang/dart-vim-plugin",
+    --ft = "dart" -- ft ~ filetype
+  },
+  {
+    --http://webcache.googleusercontent.com/search?q=cache:https://alpha2phi.medium.com/neovim-for-beginners-flutter-25a145418a4e&sca_esv=570700320&strip=1&vwsrc=0
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    ft = { "dart" },
+    config = true,
   },
 
   -- override plugin configs

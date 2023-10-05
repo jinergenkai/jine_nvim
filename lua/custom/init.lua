@@ -11,3 +11,4 @@
 --vim.cmd("autocmd BufEnter * highlight Normal guibg=NONE ctermbg=NONE")
 --vim.cmd("autocmd BufEnter * hi NvimTreeNormal guibg=NONE ctermbg=NONE")
 --require("copilot").setup()
+vim.opt.scrolloff = 10
