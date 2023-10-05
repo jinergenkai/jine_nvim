@@ -5,17 +5,17 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "tokyodark",
-  theme_toggle = { "tokyodark", "tokyodark" },
+  theme = "rosepine",
+  theme_toggle = { "rosepine", "rosepine" },
   hl_override = {
     ["Normal"] = {
-      bg = "NONE"
+      --bg = "NONE"
     },
     ["NvimTreeNormal"] = {
-      bg = "NONE"
+      --bg = "NONE"
     },
     ["NvimTreeNormalNC"] = {
-      bg = "NONE"
+      --bg = "NONE"
     }
   }
 

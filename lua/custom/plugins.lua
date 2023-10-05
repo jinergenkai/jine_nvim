@@ -48,6 +48,10 @@ local plugins = {
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine1'
+  },
   --my configs flutter
   {
     --"dart-lang/dart-vim-plugin",
