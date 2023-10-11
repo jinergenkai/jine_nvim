@@ -1,11 +1,10 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
 
-
   -- Override plugin definition options
-   {
+  {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     opts = overrides.copilot,
@@ -24,11 +23,11 @@ local plugins = {
     opts = {
       sources = {
         { name = "nvim_lsp", group_index = 2 },
-        { name = "copilot",  group_index = 2 },
-        { name = "luasnip",  group_index = 2 },
-        { name = "buffer",   group_index = 2 },
+        { name = "copilot", group_index = 2 },
+        { name = "luasnip", group_index = 2 },
+        { name = "buffer", group_index = 2 },
         { name = "nvim_lua", group_index = 2 },
-        { name = "path",     group_index = 2 },
+        { name = "path", group_index = 2 },
       },
     },
   },
@@ -49,8 +48,16 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine1'
+    "rose-pine/neovim",
+    name = "rose-pine1",
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    opts = {},
+    config = function(_, opts)
+      require("lsp_signature").setup(opts)
+    end,
   },
   --my configs flutter
   {
@@ -59,11 +66,11 @@ local plugins = {
   },
   {
     --http://webcache.googleusercontent.com/search?q=cache:https://alpha2phi.medium.com/neovim-for-beginners-flutter-25a145418a4e&sca_esv=570700320&strip=1&vwsrc=0
-    'akinsho/flutter-tools.nvim',
+    "akinsho/flutter-tools.nvim",
     lazy = false,
     dependencies = {
-        'nvim-lua/plenary.nvim',
-        'stevearc/dressing.nvim', -- optional for vim.ui.select
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
     },
     ft = { "dart" },
     config = true,
@@ -72,7 +79,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
