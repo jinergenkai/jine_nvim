@@ -12,3 +12,4 @@
 --vim.cmd("autocmd BufEnter * hi NvimTreeNormal guibg=NONE ctermbg=NONE")
 --require("copilot").setup()
 vim.opt.scrolloff = 10
+--open vimrc keyboard is leader+e+v
