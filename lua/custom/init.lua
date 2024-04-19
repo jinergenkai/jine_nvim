@@ -36,5 +36,7 @@ augroup END
 ]])
 
 --open vimrc keyboard is leader+e+v
+vim.api.nvim_set_keymap('n', '<leader>ev', ':e $MYVIMRC<CR>:e %:h/lua/custom/init.lua<CR>:cd %/../../..<CR>', { noremap = true, silent = true })
+
 --setting default terminal
 vim.opt.shell = "powershell.exe"
