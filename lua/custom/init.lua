@@ -12,7 +12,6 @@
 --vim.cmd("autocmd BufEnter * hi NvimTreeNormal guibg=NONE ctermbg=NONE")
 --require("copilot").setup()
 vim.opt.scrolloff = 10
-
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -36,3 +35,6 @@ augroup FileTypeSettings
 augroup END
 ]])
 
+--open vimrc keyboard is leader+e+v
+--setting default terminal
+vim.opt.shell = "powershell.exe"
