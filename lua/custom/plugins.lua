@@ -65,6 +65,29 @@ local plugins = {
     --ft = "dart" -- ft ~ filetype
   },
   {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+
+    dependencies = {
+      "neovim/nvim-lspconfig",
+    },
+
+    opts = function ()
+      return require "custom.configs.rust-tools"
+    end,
+
+    config = function(_, opts)
+      require('rust-tools').setup(opts)
+    end
+  },
+  {
     --http://webcache.googleusercontent.com/search?q=cache:https://alpha2phi.medium.com/neovim-for-beginners-flutter-25a145418a4e&sca_esv=570700320&strip=1&vwsrc=0
     "akinsho/flutter-tools.nvim",
     lazy = false,
@@ -79,7 +102,12 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason,
+    --opts = overrides.mason,
+    opts = {
+      ensure_installed = {
+        "rust-analyzer"
+      },
+    },
   },
 
   {

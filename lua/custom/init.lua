@@ -13,3 +13,6 @@
 --require("copilot").setup()
 vim.opt.scrolloff = 10
 --open vimrc keyboard is leader+e+v
+
+--setting default terminal
+vim.opt.shell = "powershell.exe"
