@@ -15,6 +15,7 @@ vim.opt.scrolloff = 10
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.relativenumber = true
 
 --run for cp
 function CPPSET()
@@ -42,3 +43,10 @@ vim.api.nvim_set_keymap('n', '<leader>lg', ':Telescope live_grep<CR>', { noremap
 
 --setting default terminal
 vim.opt.shell = "powershell.exe"
+
+
+
+
+
+--require("custom.configs.hardtime").setup()
+vim.opt.showmode = false
