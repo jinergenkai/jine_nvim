@@ -49,4 +49,4 @@ vim.opt.shell = "powershell.exe"
 
 
 --require("custom.configs.hardtime").setup()
-vim.opt.showmode = false
+--vim.opt.showmode = false

@@ -32,12 +32,12 @@ local plugins = {
     },
   },
   -- My config for learn + improve habit using vim
-  {
-    "m3xshen/hardtime.nvim",
-    event = "VeryLazy",
-    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    opts = {}
-  },
+  -- {
+  --   "m4xshen/hardtime.nvim",
+  --   event = "VeryLazy",
+  --   dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  --   opts = {}
+  -- },
   
   {
     "tris203/precognition.nvim",
@@ -144,8 +144,11 @@ local plugins = {
     --opts = overrides.mason,
     opts = {
       ensure_installed = {
-        "rust-analyzer"
-      },
+        "rust-analyzer",
+        "typescript-language-server",
+        "tailwindcss-language-server",
+        -- "omnisharp"
+      }
     },
   },
 
