@@ -11,6 +11,7 @@ M.copilot = {
 
 
 M.treesitter = {
+  version = false,
   ensure_installed = {
     "vim",
     "lua",
@@ -23,6 +24,9 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
   },
+  -- autopairs = {
+  --   enable = true,
+  -- },
   indent = {
     enable = true,
     -- disable = {
