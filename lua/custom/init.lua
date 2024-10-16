@@ -16,6 +16,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 
 --run for cp
 function CPPSET()
