@@ -27,6 +27,7 @@ local plugins = {
   -- Override plugin definition options
   {
     "zbirenbaum/copilot.lua",
+    enabled = false,
     event = "InsertEnter",
     opts = overrides.copilot,
   },
@@ -62,6 +63,7 @@ local plugins = {
   
   {
     "tris203/precognition.nvim",
+    enabled = false,
     event = "VeryLazy",
     opts = {
       -- startVisible = true,
@@ -171,6 +173,7 @@ local plugins = {
         "tailwindcss-language-server",
         "eslint-lsp",
         "prettierd",
+        "clangd",
 
         -- "omnisharp"
       }

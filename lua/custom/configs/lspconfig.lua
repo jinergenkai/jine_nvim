@@ -5,8 +5,9 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 local servers = { 
-  "html", "cssls", "ts_ls", "tailwindcss", "eslint", -- front end lsp
-  "clangd",
+  "html", "cssls", "ts_ls", "tailwindcss", 
+  "eslint", -- front end lsp
+  -- "clangd",
 }
 
 for _, lsp in ipairs(servers) do

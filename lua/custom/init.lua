@@ -42,7 +42,7 @@ vim.api.nvim_set_keymap('n', '<leader>ev', ':e $MYVIMRC<CR>:e %:h/lua/custom/ini
 vim.api.nvim_set_keymap('n', '<leader>lg', ':Telescope live_grep<CR>', { noremap = true, silent = true })
 
 --setting default terminal
-vim.opt.shell = "powershell.exe"
+--vim.opt.shell = "powershell.exe"
 
 
 
